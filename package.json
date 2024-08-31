@@ -2,7 +2,7 @@
   "name": "portfolio_2",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://https://github.com/MukolaSa/portfolio_2/",
+  "homepage": "https://MukolaSa.github.io/portfolio_2/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
