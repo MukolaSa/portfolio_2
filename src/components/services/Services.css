@@ -1,0 +1,117 @@
+:root {
+  --primary-color: hsl(165, 60%, 40%);
+  --title-color: hsl(0, 0%, 100%);
+  --text-color: hsl(0, 0%, 92%);
+  --bg-color: hsl(216, 18%, 16%);
+  --bg-color-alt: hsl(213, 10%, 21%);
+  --container-color: hsl(217, 18%, 14%);
+  --border-color: hsl(210, 2%, 65%);
+  --first-gradient: linear-gradient(
+    0deg,
+    var(--bg-color-alt) 0%,
+    var(--bg-color) 100%
+  );
+
+  --second-gradient: linear-gradient(
+    180deg,
+    var(--bg-color-alt) 0%,
+    var(--bg-color) 100%
+  );
+
+  --third-gradient: linear-gradient(
+    0deg,
+    var(--bg-color) 0%,
+    var(--bg-color) 100%
+  );
+
+  --body-font: 'Jost', sans-serif;
+  --second-font: 'Caveat', cursive;
+
+  --biggest-font-size: 90px;
+  --h1-font-size: 44px;
+  --h2-font-size: 30px;
+  --h3-font-size: 28px;
+  --h4-font-size: 24px;
+  --h5-font-size: 22px;
+  --larger-font-size: 20px;
+  --large-font-size: 16px;
+  --normal-font-size: 16px;
+  --small-font-size: 15px;
+  --smaller-font-size: 14px;
+  --tiny-font-size: 13px;
+
+  --shadow: 5px 5px rgb(255 255 255 / 10%);
+
+  --transition: cubic-bezier(0.3, 0, 0.3, 1);
+}
+
+/* ============================================================== */
+
+.services {
+  background-image: var(--second-gradient);
+}
+
+.swiper-wrapper {
+  margin-bottom: 52px;
+}
+
+.services__container {
+  text-align: center;
+}
+
+.services__subtitle {
+  color: var(--title-color);
+  font-size: var(--tiny-font-size);
+  font-weight: 700;
+  margin-bottom: 65px;
+  display: block;
+}
+
+.services__title {
+  font-size: var(--h4-font-size);
+  margin-bottom: 15px;
+}
+
+.services__description {
+  min-height: 175px;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets {
+  width: auto;
+  position: relative;
+  /* display: inline-block; має бути це але працює інаше*/ 
+  display: inline;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 53%;
+  transform: translateY(50%);
+  height: 2px;
+  width: 100%;
+  background-color: var(--title-color);
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    border: 2px solid var(--title-color);
+    background-color: var(--container-color);
+    z-index: 1;
+    position: relative;
+    opacity: 1;
+    margin: 0;
+    transform: all .3s var(--transition);
+}
+
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet:not(:last-child) {
+    margin-right: 20px;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet-active {
+    background-color: var(--primary-color);
+    width: 13px;
+    height: 13px;
+    top: 2px;
+}
